@@ -1,15 +1,13 @@
 {% set name = "python_http_client" %}
-{% set version = "3.2.4" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_value = "025ba6c5c3d423682957612799af47f6de845ff8559e71325442576d16dc9ad9" %}
+{% set version = "3.2.6" %}
 
 package:
-  name: '{{ name|lower }}'
-  version: '{{ version }}'
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: '{{ hash_value }}'
+  sha256: c26604194cd5b3f6a8c4d88302bd1ba818c4ffcd043e33540e1409894a456d15
 
 build:
   number: 0
@@ -18,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - pip
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
@@ -32,11 +30,11 @@ about:
   license: MIT
   license_family: MIT
   # https://github.com/sendgrid/python-http-client/pull/87
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
-  summary: "SendGrid's Python HTTP Client for calling APIs"
-  description: "Quickly and easily access any RESTful or RESTful-like API"
-  doc_url: 'https://github.com/sendgrid/python-http-client'
-  dev_url: 'https://github.com/sendgrid/python-http-client'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
+  summary: SendGrid's Python HTTP Client for calling APIs
+  description: Quickly and easily access any RESTful or RESTful-like API
+  doc_url: https://github.com/sendgrid/python-http-client
+  dev_url: https://github.com/sendgrid/python-http-client
 
 extra:
   recipe-maintainers:

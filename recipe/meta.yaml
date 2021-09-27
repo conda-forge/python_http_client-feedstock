@@ -1,5 +1,5 @@
 {% set name = "python_http_client" %}
-{% set version = "3.2.6" %}
+{% set version = "3.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c26604194cd5b3f6a8c4d88302bd1ba818c4ffcd043e33540e1409894a456d15
+  sha256: 2aef67b4f49147e623f35f32b82756e30844a8f1b55a8c7c219de694f4818214
 
 build:
   number: 0
